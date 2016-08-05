@@ -4,4 +4,6 @@ if node.platform_family?('rhel')
   default['demo']['greeting'] = 'Hello, Centosians!'
 elsif node.platform_family?('debian')
   default['demo']['greeting'] = 'Hello, Ubuntunians!'
+else
+  default['demo']['greeting'] = 'Hello, whoever you are!'
 end

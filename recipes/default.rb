@@ -1,9 +1,9 @@
 # Default recipe for the chef cookbook
 
-#file '/etc/hello' do
+# file '/etc/hello' do
 #  action :create
 #  content 'Hello world'
-#end
+# end
 
 file '/etc/hello' do
   action :create
