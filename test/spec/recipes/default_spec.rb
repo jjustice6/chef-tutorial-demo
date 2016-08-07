@@ -13,6 +13,6 @@ describe_recipe 'demo::default' do
 
   context 'with default attributes' do
     it { expect(chef_run).to include_recipe('demo::default') }
-    it { expect(chef_run).to render_file('/etc/hello').with_content(/Hello/)}
+    it { expect(chef_run).to render_file('/etc/hello') }
   end
 end
