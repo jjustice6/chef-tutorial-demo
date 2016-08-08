@@ -3,4 +3,4 @@ default_source :community
 
 cookbook 'demo', path: '.'
 
-run_list 'demo::default'
+run_list %w(chef-sugar::default demo::default)

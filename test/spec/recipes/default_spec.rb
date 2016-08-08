@@ -7,12 +7,11 @@ require_relative '../spec_helper'
 describe_recipe 'demo::default' do
   cached(:chef_run) { ChefSpec::SoloRunner.converge(described_recipe) }
   before {
-    allow(Chef::Config).to receive(:[]).and_call_original
-    allow(Chef::Config).to receive(:[]).with(:client_key).and_return('')
+    #allow(Chef::Config).to receive(:[]).with(:client_key).and_return('')
   }
 
   context 'with default attributes' do
     it { expect(chef_run).to include_recipe('demo::default') }
-    it { expect(chef_run).to render_file('/etc/hello') }
+    it { expect(chef_run).to render_file('/etc/hello')}
   end
 end
